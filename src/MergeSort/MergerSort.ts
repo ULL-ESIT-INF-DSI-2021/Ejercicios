@@ -33,6 +33,38 @@ export class MergeSort implements sortStrategy {
       low = this.divide(low);
       high = this.divide(high);
     }
-    return combine(low, high);
+    return this.combine(low, high);
+  }
+
+  combine(low: number[], high: number[]): number[] {
+    let indexLow = 0;
+    let indexHigh = 0;
+    const lengthLow = low.length;
+    const lengthHigh = high.length;
+    const combined = [];
+    while (indexLow < lengthLow || indexHigh < lengthHigh) {
+      const lowItem = low[indexLow];
+      const highItem = high[indexHigh];
+      if (lowItem !== undefined) {
+        if (highItem === undefined) {
+          combined.push(lowItem);
+          indexLow++;
+        } else {
+          if (lowItem <= highItem) {
+            combined.push(lowItem);
+            indexLow++;
+          } else {
+            combined.push(highItem);
+            indexHigh++;
+          }
+        }
+      } else {
+        if (highItem !== undefined) {
+          combined.push(highItem);
+          indexHigh++;
+        }
+      }
+    }
+    return combined;
   }
 }
