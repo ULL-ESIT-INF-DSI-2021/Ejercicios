@@ -11,7 +11,7 @@ import {sortStrategy} from '../solver';
  */
 export class BubbleSort implements sortStrategy {
   /**
-   * Executes the algorithm.
+   * Executes the algorithm bubble.
    * @param array Array to be sorted.
    */
   execute(array: number[]): number[] {
