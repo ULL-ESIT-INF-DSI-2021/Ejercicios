@@ -1,6 +1,8 @@
 {
   "entryPoints": [
-    "./src/bubbleSort/bubbleSort.ts"
+    "./src/BubbleSort/BubbleSort.ts",
+    "./src/MergeSort/MergeSort.ts",
+    "./src/solver.ts"
   ],
   "out": "./docs"
 }

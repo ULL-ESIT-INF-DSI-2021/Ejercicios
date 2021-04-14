@@ -10,6 +10,10 @@ import {sortStrategy} from '../solver';
  * ```
  */
 export class BubbleSort implements sortStrategy {
+  /**
+   * Executes the algorithm.
+   * @param array Array to be sorted.
+   */
   execute(array: number[]): number[] {
     array = array.slice();
 

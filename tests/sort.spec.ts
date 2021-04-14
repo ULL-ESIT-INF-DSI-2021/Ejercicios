@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Sort} from '../src/solver';
 import {BubbleSort} from '../src/BubbleSort/BubbleSort';
-import {MergeSort} from '../src/MergeSort/MergerSort';
+import {MergeSort} from '../src/MergeSort/MergeSort';
 
 const mySolver = new Sort([2, 4, 5, 1, 7], new MergeSort());
 
