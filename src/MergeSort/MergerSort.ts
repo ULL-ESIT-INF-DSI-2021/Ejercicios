@@ -11,18 +11,7 @@ import {sortStrategy} from '../solver';
  */
 export class MergeSort implements sortStrategy {
   execute(array: number[]): number[] {
-    array = array.slice();
-
-    for (let i = 0; i < array.length; i++) {
-      for (let j = 0; j < array.length - 1; j++) {
-        if (array[j] > array[j + 1]) {
-          const swap = array[j];
-          array[j] = array[j + 1];
-          array[j + 1] = swap;
-        }
-      }
-    }
-    return array;
+    return this.divide(array);
   }
 
   divide(items: number[]): number[] {
